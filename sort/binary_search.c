@@ -76,8 +76,6 @@ void test_binary_search() {
         int find_pos = binary_search(arr, len, test_keys[i]);
         assert(find_pos == test_excepted[i]);
     }
-    int pos = binary_search(arr, len, 2);
-
 }
 
 void test_binary_search_from_wiki() {
@@ -91,8 +89,6 @@ void test_binary_search_from_wiki() {
         int find_pos = binary_search_from_wiki(arr, 0, len - 1, test_keys[i]);
         assert(find_pos == test_excepted[i]);
     }
-    int pos = binary_search(arr, len, 2);
-
 }
 
 void test_binary_search_from_wiki_with_recursive() {
@@ -106,6 +102,5 @@ void test_binary_search_from_wiki_with_recursive() {
         int find_pos = binary_search_from_wiki_with_recursive(arr, 0, len - 1, test_keys[i]);
         assert(find_pos == test_excepted[i]);
     }
-    int pos = binary_search(arr, len, 2);
 
 }
