@@ -9,10 +9,10 @@
 
 #define ARR_SIZE(arr) (sizeof(arr) / sizeof(arr[0]))
 
-void print_arr(int *a, int len) {
+void print_arr(int* a, int len) {
     printf("[ ");
     for (int i = 0; i < len; i++) {
-        printf("%d ", i);
+        printf("%d ", a[i]);
     }
     printf("]\n");
 }
