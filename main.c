@@ -5,6 +5,7 @@
 
 #include "utils.c"
 #include "sort/binary_search.c"
+#include "sort/bubble_sort.c"
 
 void test_print_arr(){
     int a[] = {1, 2, 3, 4, 5};
@@ -12,7 +13,7 @@ void test_print_arr(){
 }
 
 int main() {
-    test_binary_search_from_wiki();
+    test_bubble_sort();
     return 0;
 }
 
