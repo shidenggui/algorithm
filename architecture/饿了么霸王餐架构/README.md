@@ -31,21 +31,21 @@
 
 主要用于保存霸王餐每期任务的情况
 
-* id int: 霸王餐期数
-* created_at datetime: 保存任务创建时间
-* finished_at datetime: 开奖时间, 开奖时设置
-* winner_uid int: 获奖用户 id, 开奖时设置
-* winner_code int: 获奖号码, 开奖时设置
-* status int: 霸王餐状态 0 为进行中，1 为开奖结束
+* `id` int: 霸王餐期数
+* `created_at` datetime: 保存任务创建时间
+* `finished_at` datetime: 开奖时间, 开奖时设置
+* `winner_uid` int: 获奖用户 id, 开奖时设置
+* `winner_code` int: 获奖号码, 开奖时设置
+* `status` int: 霸王餐状态 0 为进行中，1 为开奖结束
 
 #### free_meal_details 霸王餐用户号码详情表
 
-* id int: 自增 id
-* period int: 霸王餐期数
-* uid int: 用户 id
-* code int: 拿到的参与号码
-* allocate_time int: 参与时间，为毫秒级别时间戳
-* created_at datetime: 创建时间
+* `id` int: 自增 id
+* `period` int: 霸王餐期数
+* `uid` int: 用户 id
+* `code` int: 拿到的参与号码
+* `allocate_time` int: 参与时间，为毫秒级别时间戳
+* `created_at` datetime: 创建时间
 
 
 ### 设计思路
@@ -70,12 +70,15 @@
 
 ### 服务划分
 
-分为三个模块
+分为三个主模块
 
 * 预分配期数模块: 预先分配下一期号码到缓存队列
-* 初始化模块: 调用预分配任务模块,可以在最开始指定先预分配多少期的中奖号码
 * 分发号码模块：向用户分发指定号码，并执行相关的初始化／开奖逻辑
 * 开奖模块: 执行对应期数的开奖逻辑并写入数据库
+
+一个辅助模块
+
+* 初始化模块: 调用预分配任务模块,可以在最开始指定先预分配多少期的中奖号码
 
 
 ### 实现伪代码
