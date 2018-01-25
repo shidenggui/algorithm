@@ -168,20 +168,6 @@ def insert_new_detail_to_db(period, uid, code, allocated_time):
                            'created_at': datetime.datetime.now()})
 
 
-def insert_winner_to_db(period, uid, code):
-    table_name = 'free_meal_winners'
-    db[table_name].insert({'period': period,
-                           'uid': uid,
-                           'code': code,
-                           'created_at': datetime.datetime.now()})
-
-
-def update_free_meals_period_finish(period):
-    table_name = 'free_meals'
-    db[table_name].update({'period': period,
-                           'status': FREE_MEALS_STATUS.FINISH}, ['period'])
-
-
 def update_free_meals_period_set_winner(period, winner_uid, winner_code):
     table_name = 'free_meals'
     db[table_name].update({'period': period,
