@@ -7,6 +7,7 @@
 #include "sort/binary_search.c"
 #include "sort/bubble_sort.c"
 #include "sort/quick_sort.c"
+#include "leetcode/easy_strings_string_to_integer.c"
 
 void test_print_arr(){
     int a[] = {1, 2, 3, 4, 5};
@@ -14,7 +15,7 @@ void test_print_arr(){
 }
 
 int main() {
-    test_quick_sort();
+    test_atoi_from_python_source_code();
     return 0;
 }
 
