@@ -56,7 +56,7 @@ int atoi_from_python_source_code(char* str) {
 
 
 void test_atoi_from_python_source_code() {
-    const char* test_cases[] = {
+    char* test_cases[] = {
             "",
             "1",
             " 123",
