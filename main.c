@@ -9,6 +9,7 @@
 #include "sort/quick_sort.c"
 #include "leetcode/easy_strings_string_to_integer.c"
 #include "leetcode/easy_array_remove_duplicates_from_sorted_array.c"
+#include "leetcode/easy_array_search_in_rotated_sorted_array.c"
 
 void test_print_arr(){
     int a[] = {1, 2, 3, 4, 5};
@@ -16,7 +17,7 @@ void test_print_arr(){
 }
 
 int main() {
-    test_remove_duplicates_from_sorted_array();
+    test_search_in_rotated_sorted_array();
     return 0;
 }
 
